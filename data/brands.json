@@ -1,0 +1,20 @@
+[
+  {
+    "id": "brand-1",
+    "name": "TechVision",
+    "domain": "techvision.io",
+    "industry": "SaaS"
+  },
+  {
+    "id": "brand-2",
+    "name": "HealthPlus",
+    "domain": "healthplus.com",
+    "industry": "Healthcare"
+  },
+  {
+    "id": "brand-3",
+    "name": "EcoMarket",
+    "domain": "ecomarket.shop",
+    "industry": "E-commerce"
+  }
+]

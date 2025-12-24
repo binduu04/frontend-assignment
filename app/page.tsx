@@ -1,65 +1,234 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { ArrowRight, Brain, Target, TrendingUp, Search, Shield, Lightbulb, BarChart3 } from 'lucide-react';
 
 export default function Home() {
+  const modules = [
+    {
+      icon: <Search className="w-6 h-6" />,
+      title: 'Content Analysis',
+      description: 'Deep analysis of content quality, relevance, and AI-friendliness'
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'E-E-A-T Assessment',
+      description: 'Evaluate Experience, Expertise, Authoritativeness, and Trust signals'
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: 'Keyword Optimization',
+      description: 'AI-first keyword targeting for conversational search'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: 'Technical SEO',
+      description: 'Infrastructure audit for AI crawler accessibility'
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: 'Competitor Analysis',
+      description: 'Benchmark against competitors in AI-powered search'
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: 'AI Visibility',
+      description: 'Track presence in ChatGPT, Perplexity, Gemini responses'
+    },
+    {
+      icon: <Lightbulb className="w-6 h-6" />,
+      title: 'Brand Sentiment',
+      description: 'Analyze how AI models characterize your brand'
+    }
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-b from-gray-50 to-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                Win the AI-First Search Era
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Kasparro is an AI-native SEO & Brand Intelligence platform that helps you dominate 
+                AI-powered search engines like ChatGPT, Perplexity, and Gemini.
+              </p>
+              <div className="flex gap-4 justify-center">
+                <Link href="/app/dashboard">
+                  <Button size="lg" className="gap-2">
+                    Run AI-SEO Audit <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+                <Link href="/platform">
+                  <Button size="lg" variant="outline">
+                    Learn More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why AI-SEO Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                Why AI-SEO is Different
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Traditional SEO</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-gray-600">
+                    <ul className="space-y-2">
+                      <li>• Optimizes for Google&apos;s algorithm</li>
+                      <li>• Focuses on keyword rankings</li>
+                      <li>• Driven by backlinks and CTR</li>
+                      <li>• Page-centric approach</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                
+                <Card className="border-primary">
+                  <CardHeader>
+                    <CardTitle className="text-primary">AI-Native SEO</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-gray-600">
+                    <ul className="space-y-2">
+                      <li>• Optimizes for AI model comprehension</li>
+                      <li>• Focuses on context and relevance</li>
+                      <li>• Driven by E-E-A-T and structured data</li>
+                      <li>• Brand-centric approach</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Modules Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+                7 Core Audit Modules
+              </h2>
+              <p className="text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+                Comprehensive analysis across all dimensions of AI-first search performance
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {modules.map((module, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardHeader>
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                        {module.icon}
+                      </div>
+                      <CardTitle className="text-lg">{module.title}</CardTitle>
+                      <CardDescription>{module.description}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+                How Kasparro Works
+              </h2>
+              
+              <div className="space-y-8">
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Input Assembly</h3>
+                    <p className="text-gray-600">
+                      We crawl your website, analyze your content, and gather comprehensive data about 
+                      your digital presence across all relevant channels.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Context Packing</h3>
+                    <p className="text-gray-600">
+                      Our AI enriches your data with competitive intelligence, industry benchmarks, 
+                      and AI model behavior patterns.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Multi-Module Analysis</h3>
+                    <p className="text-gray-600">
+                      7 specialized AI agents analyze different aspects of your AI-SEO performance, 
+                      identifying strengths, weaknesses, and opportunities.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Actionable Insights</h3>
+                    <p className="text-gray-600">
+                      Receive prioritized recommendations with expected impact, effort estimates, 
+                      and implementation guidance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-primary text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Ready to Dominate AI-Powered Search?
+            </h2>
+            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+              Get a comprehensive AI-SEO audit and discover how your brand performs 
+              in ChatGPT, Perplexity, and Gemini.
+            </p>
+            <Link href="/app/dashboard">
+              <Button size="lg" variant="secondary" className="gap-2">
+                Start Your Free Audit <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </section>
       </main>
+      
+      <Footer />
     </div>
   );
 }

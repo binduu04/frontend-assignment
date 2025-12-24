@@ -1,0 +1,382 @@
+{
+  "brand-1": {
+    "brandId": "brand-1",
+    "timestamp": "2025-12-20T14:30:00Z",
+    "modules": [
+      {
+        "id": "content-analysis",
+        "name": "Content Analysis",
+        "description": "Analyzes content quality, relevance, and AI-friendliness",
+        "score": {
+          "value": 82,
+          "maxValue": 100,
+          "label": "Content Quality Score"
+        },
+        "insights": [
+          {
+            "id": "insight-1",
+            "title": "Strong topical authority in core areas",
+            "description": "Your content demonstrates deep expertise in cloud infrastructure and DevOps topics, which aligns well with AI-first search preferences.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-2",
+            "title": "Content freshness needs improvement",
+            "description": "25% of your top-performing pages haven't been updated in over 12 months, which may affect AI model training data relevance.",
+            "type": "neutral"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-1",
+            "title": "Thin content on key landing pages",
+            "severity": "high",
+            "description": "15 product pages have less than 300 words, which is insufficient for AI models to extract meaningful context.",
+            "affectedArea": "/products/*"
+          },
+          {
+            "id": "issue-2",
+            "title": "Missing structured data on blog posts",
+            "severity": "medium",
+            "description": "Blog articles lack Article schema markup, reducing AI model comprehension of authorship and publishing details.",
+            "affectedArea": "/blog/*"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-1",
+            "title": "Expand product page content depth",
+            "priority": "high",
+            "description": "Add comprehensive use cases, technical specifications, and comparison tables to product pages. Target 800-1200 words per page.",
+            "expectedImpact": "15-20% improvement in AI visibility score",
+            "effort": "high"
+          },
+          {
+            "id": "rec-2",
+            "title": "Implement comprehensive schema markup",
+            "priority": "high",
+            "description": "Add Article, Product, and Organization schema across relevant pages to enhance AI model understanding.",
+            "expectedImpact": "10-15% improvement in context extraction",
+            "effort": "medium"
+          },
+          {
+            "id": "rec-3",
+            "title": "Create quarterly content refresh schedule",
+            "priority": "medium",
+            "description": "Establish a systematic review process to update high-traffic pages with latest data, examples, and insights.",
+            "expectedImpact": "Maintain current relevance scores",
+            "effort": "medium"
+          }
+        ]
+      },
+      {
+        "id": "eeat-assessment",
+        "name": "E-E-A-T Assessment",
+        "description": "Evaluates Experience, Expertise, Authoritativeness, and Trustworthiness signals",
+        "score": {
+          "value": 85,
+          "maxValue": 100,
+          "label": "E-E-A-T Score"
+        },
+        "insights": [
+          {
+            "id": "insight-3",
+            "title": "Strong author credibility signals",
+            "description": "Technical authors have well-documented industry experience and credentials, which AI models prioritize.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-4",
+            "title": "Limited external validation",
+            "description": "Few citations from authoritative third-party sources, which could strengthen trust signals.",
+            "type": "neutral"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-3",
+            "title": "Inconsistent author bylines",
+            "severity": "medium",
+            "description": "40% of blog posts lack author attribution or link to author bio pages.",
+            "affectedArea": "/blog/*"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-4",
+            "title": "Standardize author attribution",
+            "priority": "high",
+            "description": "Ensure all content includes author bylines with links to detailed bio pages showcasing credentials and experience.",
+            "expectedImpact": "8-12% improvement in trust score",
+            "effort": "low"
+          },
+          {
+            "id": "rec-5",
+            "title": "Build third-party citation network",
+            "priority": "medium",
+            "description": "Pursue mentions and citations in industry publications, research papers, and authoritative tech blogs.",
+            "expectedImpact": "15-20% improvement in authority signals",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "keyword-optimization",
+        "name": "Keyword Optimization",
+        "description": "Analyzes keyword targeting for AI-first search contexts",
+        "score": {
+          "value": 68,
+          "maxValue": 100,
+          "label": "Keyword Optimization Score"
+        },
+        "insights": [
+          {
+            "id": "insight-5",
+            "title": "Good coverage of branded keywords",
+            "description": "Strong presence for brand-specific queries, but limited visibility for non-branded, intent-driven searches.",
+            "type": "neutral"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-4",
+            "title": "Low coverage of conversational queries",
+            "severity": "high",
+            "description": "Content doesn't target natural language question patterns that AI models prefer (e.g., 'how to', 'what is', 'best way to').",
+            "affectedArea": "Site-wide"
+          },
+          {
+            "id": "issue-5",
+            "title": "Missing semantic keyword clusters",
+            "severity": "medium",
+            "description": "Pages focus on single keywords rather than comprehensive topic clusters that AI models use for context.",
+            "affectedArea": "All content pages"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-6",
+            "title": "Develop FAQ-based content",
+            "priority": "high",
+            "description": "Create comprehensive FAQ sections addressing common conversational queries in your domain.",
+            "expectedImpact": "20-25% increase in non-branded visibility",
+            "effort": "medium"
+          },
+          {
+            "id": "rec-7",
+            "title": "Build semantic topic clusters",
+            "priority": "high",
+            "description": "Reorganize content around core topics with pillar pages and supporting cluster content.",
+            "expectedImpact": "18-22% improvement in topical authority",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "technical-seo",
+        "name": "Technical SEO",
+        "description": "Evaluates technical infrastructure and crawlability",
+        "score": {
+          "value": 76,
+          "maxValue": 100,
+          "label": "Technical SEO Score"
+        },
+        "insights": [
+          {
+            "id": "insight-6",
+            "title": "Excellent site performance",
+            "description": "Core Web Vitals are consistently in the 'good' range, which positively impacts AI crawler efficiency.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-6",
+            "title": "Inconsistent URL structure",
+            "severity": "medium",
+            "description": "Mixed URL patterns make it harder for AI models to understand site hierarchy and content relationships.",
+            "affectedArea": "Site-wide"
+          },
+          {
+            "id": "issue-7",
+            "title": "Robots.txt blocking valuable content",
+            "severity": "high",
+            "description": "Case studies and whitepapers are blocked from AI crawlers, missing key authority-building content.",
+            "affectedArea": "/resources/*"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-8",
+            "title": "Audit and fix robots.txt",
+            "priority": "high",
+            "description": "Review crawler directives to ensure all valuable content is accessible to AI search engines.",
+            "expectedImpact": "12-15% increase in crawlable authority content",
+            "effort": "low"
+          },
+          {
+            "id": "rec-9",
+            "title": "Standardize URL architecture",
+            "priority": "medium",
+            "description": "Implement consistent URL patterns that clearly indicate content type and hierarchy.",
+            "expectedImpact": "8-10% improvement in structural clarity",
+            "effort": "medium"
+          }
+        ]
+      },
+      {
+        "id": "competitor-analysis",
+        "name": "Competitor Analysis",
+        "description": "Benchmarks performance against key competitors in AI-first search",
+        "score": {
+          "value": 72,
+          "maxValue": 100,
+          "label": "Competitive Position Score"
+        },
+        "insights": [
+          {
+            "id": "insight-7",
+            "title": "Leading in technical content depth",
+            "description": "Your technical documentation outperforms competitors in comprehensiveness, a key advantage for AI models.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-8",
+            "title": "Lagging in content volume",
+            "description": "Competitors publish 3x more content monthly, giving them broader topical coverage in AI training data.",
+            "type": "negative"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-8",
+            "title": "Competitors dominate comparison queries",
+            "severity": "high",
+            "description": "AI models primarily reference competitor content for '[your product] vs [competitor]' queries.",
+            "affectedArea": "Comparison content"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-10",
+            "title": "Create comprehensive comparison hub",
+            "priority": "high",
+            "description": "Build authoritative comparison content that presents balanced, detailed analysis of your solution vs. competitors.",
+            "expectedImpact": "25-30% improvement in comparison query visibility",
+            "effort": "high"
+          },
+          {
+            "id": "rec-11",
+            "title": "Accelerate content publication cadence",
+            "priority": "medium",
+            "description": "Increase content production to 12-15 pieces per month to match competitor volume.",
+            "expectedImpact": "15-18% increase in topical breadth",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "ai-visibility",
+        "name": "AI Visibility",
+        "description": "Measures presence in AI-powered search results (ChatGPT, Perplexity, Gemini)",
+        "score": {
+          "value": 78,
+          "maxValue": 100,
+          "label": "AI Search Visibility Score"
+        },
+        "insights": [
+          {
+            "id": "insight-9",
+            "title": "Strong ChatGPT citation rate",
+            "description": "Your content is cited in 45% of relevant ChatGPT responses, above industry average of 28%.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-10",
+            "title": "Lower visibility in Perplexity",
+            "description": "Only 22% citation rate in Perplexity, suggesting opportunities for recency and source authority improvements.",
+            "type": "neutral"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-9",
+            "title": "Limited presence in comparative responses",
+            "severity": "medium",
+            "description": "When AI models compare solutions, competitors are mentioned 2.5x more frequently.",
+            "affectedArea": "Competitive positioning"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-12",
+            "title": "Optimize for Perplexity's recency bias",
+            "priority": "high",
+            "description": "Publish timely, newsworthy content and maintain aggressive content freshness to match Perplexity's preferences.",
+            "expectedImpact": "20-25% improvement in Perplexity citations",
+            "effort": "medium"
+          },
+          {
+            "id": "rec-13",
+            "title": "Enhance competitive positioning content",
+            "priority": "high",
+            "description": "Create detailed feature comparison matrices, use case analyses, and implementation guides that AI models can reference.",
+            "expectedImpact": "30-35% increase in comparative query mentions",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "brand-sentiment",
+        "name": "Brand Sentiment",
+        "description": "Analyzes how AI models characterize and position your brand",
+        "score": {
+          "value": 88,
+          "maxValue": 100,
+          "label": "Brand Sentiment Score"
+        },
+        "insights": [
+          {
+            "id": "insight-11",
+            "title": "Consistently positive characterization",
+            "description": "AI models use positive descriptors (innovative, reliable, developer-friendly) in 82% of brand mentions.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-12",
+            "title": "Strong association with key value props",
+            "description": "AI models correctly associate your brand with ease of use, performance, and security in unprompted responses.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-10",
+            "title": "Occasional outdated information",
+            "severity": "low",
+            "description": "Some AI responses reference deprecated features or pricing, indicating training data lag.",
+            "affectedArea": "Product information"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-14",
+            "title": "Maintain public changelog and release notes",
+            "priority": "medium",
+            "description": "Publish detailed, AI-crawlable changelog to help models stay current with product evolution.",
+            "expectedImpact": "Reduce outdated information by 60-70%",
+            "effort": "low"
+          },
+          {
+            "id": "rec-15",
+            "title": "Amplify third-party validation",
+            "priority": "medium",
+            "description": "Pursue case studies, testimonials, and awards that reinforce positive brand associations in AI training data.",
+            "expectedImpact": "10-12% increase in positive sentiment signals",
+            "effort": "medium"
+          }
+        ]
+      }
+    ]
+  }
+}

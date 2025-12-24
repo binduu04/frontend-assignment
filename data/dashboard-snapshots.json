@@ -1,0 +1,68 @@
+{
+  "brand-1": {
+    "brandId": "brand-1",
+    "aiVisibilityScore": {
+      "value": 78,
+      "maxValue": 100,
+      "label": "AI Visibility Score",
+      "trend": "up"
+    },
+    "trustScore": {
+      "value": 85,
+      "maxValue": 100,
+      "label": "Trust / E-E-A-T Score",
+      "trend": "stable"
+    },
+    "keywordCoverage": {
+      "value": 62,
+      "maxValue": 100,
+      "label": "Non-Branded Keyword Coverage",
+      "trend": "up"
+    },
+    "lastAuditDate": "2025-12-20T14:30:00Z"
+  },
+  "brand-2": {
+    "brandId": "brand-2",
+    "aiVisibilityScore": {
+      "value": 65,
+      "maxValue": 100,
+      "label": "AI Visibility Score",
+      "trend": "down"
+    },
+    "trustScore": {
+      "value": 72,
+      "maxValue": 100,
+      "label": "Trust / E-E-A-T Score",
+      "trend": "up"
+    },
+    "keywordCoverage": {
+      "value": 58,
+      "maxValue": 100,
+      "label": "Non-Branded Keyword Coverage",
+      "trend": "stable"
+    },
+    "lastAuditDate": "2025-12-19T10:15:00Z"
+  },
+  "brand-3": {
+    "brandId": "brand-3",
+    "aiVisibilityScore": {
+      "value": 82,
+      "maxValue": 100,
+      "label": "AI Visibility Score",
+      "trend": "up"
+    },
+    "trustScore": {
+      "value": 90,
+      "maxValue": 100,
+      "label": "Trust / E-E-A-T Score",
+      "trend": "up"
+    },
+    "keywordCoverage": {
+      "value": 75,
+      "maxValue": 100,
+      "label": "Non-Branded Keyword Coverage",
+      "trend": "up"
+    },
+    "lastAuditDate": "2025-12-21T16:45:00Z"
+  }
+}
