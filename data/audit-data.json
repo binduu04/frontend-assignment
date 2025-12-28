@@ -378,5 +378,574 @@
         ]
       }
     ]
+  },
+  "brand-2": {
+    "brandId": "brand-2",
+    "timestamp": "2025-12-19T10:15:00Z",
+    "modules": [
+      {
+        "id": "content-analysis",
+        "name": "Content Analysis",
+        "description": "Analyzes content quality, relevance, and AI-friendliness",
+        "score": {
+          "value": 68,
+          "maxValue": 100,
+          "label": "Content Quality Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b2-1",
+            "title": "Emerging healthcare content authority",
+            "description": "Your medical content shows promise, but needs more depth and clinical validation to compete in AI-first search.",
+            "type": "neutral"
+          },
+          {
+            "id": "insight-b2-2",
+            "title": "Limited content freshness",
+            "description": "Healthcare information becomes outdated quickly. 40% of your content is over 18 months old.",
+            "type": "negative"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b2-1",
+            "title": "Medical disclaimers affecting AI comprehension",
+            "severity": "medium",
+            "description": "Excessive legal disclaimers reduce content clarity for AI models trying to extract medical information.",
+            "affectedArea": "/health/*"
+          },
+          {
+            "id": "issue-b2-2",
+            "title": "Missing author credentials for medical content",
+            "severity": "high",
+            "description": "Medical articles lack author credentials, which are critical for E-E-A-T in healthcare.",
+            "affectedArea": "/articles/*"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b2-1",
+            "title": "Add medical professional bylines",
+            "priority": "high",
+            "description": "Ensure all health content is authored or reviewed by licensed medical professionals with credentials displayed.",
+            "expectedImpact": "25-30% improvement in healthcare trust signals",
+            "effort": "medium"
+          },
+          {
+            "id": "rec-b2-2",
+            "title": "Implement quarterly medical content review",
+            "priority": "high",
+            "description": "Establish process to review and update medical content every 3 months to maintain accuracy.",
+            "expectedImpact": "15-20% improvement in content freshness",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "eeat-assessment",
+        "name": "E-E-A-T Assessment",
+        "description": "Evaluates Experience, Expertise, Authoritativeness, and Trustworthiness signals",
+        "score": {
+          "value": 72,
+          "maxValue": 100,
+          "label": "E-E-A-T Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b2-3",
+            "title": "Medical licensing adds credibility",
+            "description": "Your organization's healthcare licenses are recognized by AI models as strong trust signals.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b2-3",
+            "title": "Inconsistent author attribution",
+            "severity": "medium",
+            "description": "Only 55% of articles have clear author attribution with professional credentials.",
+            "affectedArea": "Site-wide"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b2-3",
+            "title": "Create comprehensive author bio pages",
+            "priority": "high",
+            "description": "Build detailed bio pages for all medical contributors showcasing education, licenses, and experience.",
+            "expectedImpact": "18-22% improvement in authority signals",
+            "effort": "medium"
+          }
+        ]
+      },
+      {
+        "id": "keyword-optimization",
+        "name": "Keyword Optimization",
+        "description": "Analyzes keyword targeting for AI-first search contexts",
+        "score": {
+          "value": 58,
+          "maxValue": 100,
+          "label": "Keyword Optimization Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b2-4",
+            "title": "Missing symptom-based queries",
+            "description": "Healthcare searchers often use symptom descriptions. Your content doesn't target these conversational queries.",
+            "type": "negative"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b2-4",
+            "title": "Technical medical jargon limits accessibility",
+            "severity": "high",
+            "description": "Content uses technical terms without plain-language explanations, reducing AI model comprehension.",
+            "affectedArea": "All content pages"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b2-4",
+            "title": "Create symptom-based content clusters",
+            "priority": "high",
+            "description": "Develop content targeting how users describe symptoms in natural language.",
+            "expectedImpact": "30-35% increase in healthcare query coverage",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "technical-seo",
+        "name": "Technical SEO",
+        "description": "Evaluates technical infrastructure and crawlability",
+        "score": {
+          "value": 74,
+          "maxValue": 100,
+          "label": "Technical SEO Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b2-5",
+            "title": "Good HTTPS and security implementation",
+            "description": "Strong security signals are critical for healthcare sites and positively impact trust.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b2-5",
+            "title": "Slow page load times on mobile",
+            "severity": "medium",
+            "description": "Healthcare pages load slowly on mobile devices, impacting both user experience and crawl efficiency.",
+            "affectedArea": "Mobile pages"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b2-5",
+            "title": "Optimize mobile page performance",
+            "priority": "high",
+            "description": "Implement lazy loading for images, minify CSS/JS, and optimize for Core Web Vitals.",
+            "expectedImpact": "12-15% improvement in mobile performance scores",
+            "effort": "medium"
+          }
+        ]
+      },
+      {
+        "id": "competitor-analysis",
+        "name": "Competitor Analysis",
+        "description": "Benchmarks performance against key competitors in AI-first search",
+        "score": {
+          "value": 65,
+          "maxValue": 100,
+          "label": "Competitive Position Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b2-6",
+            "title": "Lagging behind major health portals",
+            "description": "Established health information sites have 3-4x more AI citations for similar health queries.",
+            "type": "negative"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b2-6",
+            "title": "Limited coverage of common conditions",
+            "severity": "high",
+            "description": "Competitors have comprehensive guides for top 50 health conditions; you cover only 15.",
+            "affectedArea": "Content coverage"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b2-6",
+            "title": "Expand condition coverage systematically",
+            "priority": "high",
+            "description": "Create comprehensive, medically-reviewed guides for top 100 health conditions.",
+            "expectedImpact": "40-45% increase in healthcare topic authority",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "ai-visibility",
+        "name": "AI Visibility",
+        "description": "Measures presence in AI-powered search results (ChatGPT, Perplexity, Gemini)",
+        "score": {
+          "value": 65,
+          "maxValue": 100,
+          "label": "AI Search Visibility Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b2-7",
+            "title": "Moderate presence in health queries",
+            "description": "Your site appears in 28% of relevant health queries in ChatGPT, below industry average of 35%.",
+            "type": "neutral"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b2-7",
+            "title": "Low citation rate in medical comparisons",
+            "severity": "medium",
+            "description": "When AI models compare treatment options, your content is rarely cited.",
+            "affectedArea": "Treatment guides"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b2-7",
+            "title": "Create evidence-based comparison guides",
+            "priority": "high",
+            "description": "Develop detailed, medically-sourced comparison content for common treatment options.",
+            "expectedImpact": "25-30% improvement in AI citations",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "brand-sentiment",
+        "name": "Brand Sentiment",
+        "description": "Analyzes how AI models characterize and position your brand",
+        "score": {
+          "value": 76,
+          "maxValue": 100,
+          "label": "Brand Sentiment Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b2-8",
+            "title": "Positive patient-focused characterization",
+            "description": "AI models describe your brand as patient-focused and accessible in 72% of mentions.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b2-8",
+            "title": "Occasional outdated service information",
+            "severity": "low",
+            "description": "Some AI responses reference discontinued services or old pricing.",
+            "affectedArea": "Service information"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b2-8",
+            "title": "Maintain up-to-date service directory",
+            "priority": "medium",
+            "description": "Regularly update service offerings, pricing, and availability information.",
+            "expectedImpact": "Reduce outdated information by 70-80%",
+            "effort": "low"
+          }
+        ]
+      }
+    ]
+  },
+  "brand-3": {
+    "brandId": "brand-3",
+    "timestamp": "2025-12-21T16:45:00Z",
+    "modules": [
+      {
+        "id": "content-analysis",
+        "name": "Content Analysis",
+        "description": "Analyzes content quality, relevance, and AI-friendliness",
+        "score": {
+          "value": 85,
+          "maxValue": 100,
+          "label": "Content Quality Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b3-1",
+            "title": "Excellent product content depth",
+            "description": "Product descriptions are comprehensive with detailed sustainability information that AI models value.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-b3-2",
+            "title": "Strong sustainability narrative",
+            "description": "Environmental commitment is clearly communicated and consistently reinforced across content.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b3-1",
+            "title": "Limited category page content",
+            "severity": "medium",
+            "description": "Category pages have minimal unique content, mostly relying on product listings.",
+            "affectedArea": "/category/*"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b3-1",
+            "title": "Enhance category pages with educational content",
+            "priority": "medium",
+            "description": "Add buying guides, sustainability tips, and category-specific eco-information.",
+            "expectedImpact": "15-18% improvement in category page authority",
+            "effort": "medium"
+          }
+        ]
+      },
+      {
+        "id": "eeat-assessment",
+        "name": "E-E-A-T Assessment",
+        "description": "Evaluates Experience, Expertise, Authoritativeness, and Trustworthiness signals",
+        "score": {
+          "value": 90,
+          "maxValue": 100,
+          "label": "E-E-A-T Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b3-3",
+            "title": "Industry certifications well-displayed",
+            "description": "B-Corp certification and eco-labels are prominently featured, boosting trust signals.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-b3-4",
+            "title": "Strong third-party validation",
+            "description": "Multiple sustainability certifications from recognized organizations enhance authority.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b3-2",
+            "title": "Product sourcing transparency could improve",
+            "severity": "low",
+            "description": "Some products lack detailed supply chain information that eco-conscious consumers seek.",
+            "affectedArea": "Product pages"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b3-2",
+            "title": "Add detailed supply chain information",
+            "priority": "medium",
+            "description": "Provide transparency about product origins, manufacturing processes, and sustainability metrics.",
+            "expectedImpact": "8-10% improvement in trust signals",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "keyword-optimization",
+        "name": "Keyword Optimization",
+        "description": "Analyzes keyword targeting for AI-first search contexts",
+        "score": {
+          "value": 75,
+          "maxValue": 100,
+          "label": "Keyword Optimization Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b3-5",
+            "title": "Good coverage of eco-friendly search terms",
+            "description": "Content effectively targets sustainability-related conversational queries.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b3-3",
+            "title": "Missing comparison and alternative queries",
+            "severity": "medium",
+            "description": "Limited content for 'eco-friendly alternative to X' type queries that AI models frequently answer.",
+            "affectedArea": "Blog content"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b3-3",
+            "title": "Create sustainable alternative guides",
+            "priority": "high",
+            "description": "Develop content comparing eco-friendly alternatives to common conventional products.",
+            "expectedImpact": "22-25% increase in comparison query visibility",
+            "effort": "medium"
+          }
+        ]
+      },
+      {
+        "id": "technical-seo",
+        "name": "Technical SEO",
+        "description": "Evaluates technical infrastructure and crawlability",
+        "score": {
+          "value": 88,
+          "maxValue": 100,
+          "label": "Technical SEO Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b3-6",
+            "title": "Excellent site performance",
+            "description": "Fast loading times and optimized images provide great user experience and crawl efficiency.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b3-4",
+            "title": "Product schema missing sustainability fields",
+            "severity": "low",
+            "description": "Product schema doesn't include sustainability attributes that AI models could use.",
+            "affectedArea": "Product pages"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b3-4",
+            "title": "Enhance product schema with sustainability data",
+            "priority": "medium",
+            "description": "Add custom schema fields for eco-certifications, carbon footprint, and sustainability ratings.",
+            "expectedImpact": "10-12% improvement in AI model understanding",
+            "effort": "low"
+          }
+        ]
+      },
+      {
+        "id": "competitor-analysis",
+        "name": "Competitor Analysis",
+        "description": "Benchmarks performance against key competitors in AI-first search",
+        "score": {
+          "value": 80,
+          "maxValue": 100,
+          "label": "Competitive Position Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b3-7",
+            "title": "Leading in sustainability positioning",
+            "description": "Your brand is cited 45% more often than competitors for eco-friendly product queries.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b3-5",
+            "title": "Competitors have more educational content",
+            "severity": "medium",
+            "description": "Major competitors publish 2-3x more sustainability education content monthly.",
+            "affectedArea": "Blog/Education"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b3-5",
+            "title": "Increase educational content production",
+            "priority": "high",
+            "description": "Publish weekly sustainability guides, how-tos, and eco-living tips.",
+            "expectedImpact": "18-22% increase in topical authority",
+            "effort": "high"
+          }
+        ]
+      },
+      {
+        "id": "ai-visibility",
+        "name": "AI Visibility",
+        "description": "Measures presence in AI-powered search results (ChatGPT, Perplexity, Gemini)",
+        "score": {
+          "value": 82,
+          "maxValue": 100,
+          "label": "AI Search Visibility Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b3-8",
+            "title": "Excellent ChatGPT and Perplexity presence",
+            "description": "Your products are recommended in 52% of relevant eco-shopping queries across AI search engines.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b3-6",
+            "title": "Lower visibility in Gemini",
+            "severity": "medium",
+            "description": "Gemini cites your brand less frequently (32%) compared to ChatGPT and Perplexity.",
+            "affectedArea": "Gemini AI search"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b3-6",
+            "title": "Optimize for Gemini's preferences",
+            "priority": "medium",
+            "description": "Focus on structured data and visual content that Gemini prioritizes.",
+            "expectedImpact": "15-20% improvement in Gemini citations",
+            "effort": "medium"
+          }
+        ]
+      },
+      {
+        "id": "brand-sentiment",
+        "name": "Brand Sentiment",
+        "description": "Analyzes how AI models characterize and position your brand",
+        "score": {
+          "value": 92,
+          "maxValue": 100,
+          "label": "Brand Sentiment Score"
+        },
+        "insights": [
+          {
+            "id": "insight-b3-9",
+            "title": "Overwhelmingly positive sentiment",
+            "description": "AI models use positive sustainability descriptors in 88% of brand mentions.",
+            "type": "positive"
+          },
+          {
+            "id": "insight-b3-10",
+            "title": "Strong eco-leadership association",
+            "description": "Your brand is positioned as a sustainability leader in the e-commerce space.",
+            "type": "positive"
+          }
+        ],
+        "issues": [
+          {
+            "id": "issue-b3-7",
+            "title": "Minimal negative sentiment",
+            "severity": "low",
+            "description": "Occasional mentions of higher pricing compared to conventional alternatives.",
+            "affectedArea": "Pricing perception"
+          }
+        ],
+        "recommendations": [
+          {
+            "id": "rec-b3-7",
+            "title": "Communicate value proposition clearly",
+            "priority": "low",
+            "description": "Create content explaining the true cost of sustainability and value beyond price.",
+            "expectedImpact": "5-8% improvement in price perception",
+            "effort": "low"
+          }
+        ]
+      }
+    ]
   }
 }

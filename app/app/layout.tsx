@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LayoutDashboard, FileSearch, Network } from 'lucide-react';
+import { ThemeToggle } from '@/components/shared/ThemeToggle';
 
 export default function AppLayout({
   children,
@@ -18,16 +19,17 @@ export default function AppLayout({
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       {/* Top Header */}
-      <header className="bg-white border-b">
+      <header className="bg-white dark:bg-gray-900 border-b dark:border-gray-800">
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
+            <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white">
               Kasparro
             </Link>
             <div className="flex items-center gap-4">
-              <Link href="/" className="text-sm text-gray-600 hover:text-gray-900">
+              <ThemeToggle />
+              <Link href="/" className="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                 Back to Website
               </Link>
             </div>
@@ -37,7 +39,7 @@ export default function AppLayout({
 
       <div className="flex">
         {/* Sidebar Navigation */}
-        <aside className="w-64 bg-white border-r min-h-[calc(100vh-73px)]">
+        <aside className="w-64 bg-white dark:bg-gray-900 border-r dark:border-gray-800 min-h-[calc(100vh-73px)]">
           <nav className="p-4 space-y-2">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -49,8 +51,8 @@ export default function AppLayout({
                   href={item.href}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                     isActive
-                      ? 'bg-primary text-white'
-                      : 'text-gray-600 hover:bg-gray-100'
+                      ? 'bg-gray-800 dark:bg-gray-700 text-white border-2 border-primary'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -62,7 +64,7 @@ export default function AppLayout({
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1">
+        <main className="flex-1 dark:bg-gray-950">
           {children}
         </main>
       </div>

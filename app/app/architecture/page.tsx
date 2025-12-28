@@ -7,8 +7,8 @@ export default function ArchitecturePage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">System Architecture</h1>
-          <p className="text-gray-600">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">System Architecture</h1>
+          <p className="text-gray-600 dark:text-gray-300">
             Visual representation of the Kasparro AI-SEO audit pipeline
           </p>
         </div>
@@ -31,8 +31,8 @@ export default function ArchitecturePage() {
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold mb-3">Data Sources</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <h4 className="font-semibold dark:text-white mb-3">Data Sources</h4>
+                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                     <li>• Website crawling (content, structure, meta)</li>
                     <li>• Technical infrastructure analysis</li>
                     <li>• Schema markup extraction</li>
@@ -41,8 +41,8 @@ export default function ArchitecturePage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-3">Output</h4>
-                  <div className="bg-gray-50 p-3 rounded border text-sm font-mono text-gray-700">
+                  <h4 className="font-semibold dark:text-white mb-3">Output</h4>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded border dark:border-gray-700 text-sm font-mono text-gray-700 dark:text-gray-300">
                     <div>{'{'}</div>
                     <div className="ml-4">domain: &quot;techvision.io&quot;,</div>
                     <div className="ml-4">pages: [&nbsp;&#123;...&#125;,&nbsp;&#123;...&#125;&nbsp;],</div>
@@ -76,8 +76,8 @@ export default function ArchitecturePage() {
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold mb-3">Enrichment Sources</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <h4 className="font-semibold dark:text-white mb-3">Enrichment Sources</h4>
+                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                     <li>• Competitor analysis data</li>
                     <li>• Industry benchmarks</li>
                     <li>• AI model behavior patterns</li>
@@ -87,8 +87,8 @@ export default function ArchitecturePage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-3">Enriched Context</h4>
-                  <div className="bg-gray-50 p-3 rounded border text-sm font-mono text-gray-700">
+                  <h4 className="font-semibold dark:text-white mb-3">Enriched Context</h4>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded border dark:border-gray-700 text-sm font-mono text-gray-700 dark:text-gray-300">
                     <div>{'{'}</div>
                     <div className="ml-4">inputData: &#123;...&#125;,</div>
                     <div className="ml-4">competitors: [&nbsp;&#123;...&#125;&nbsp;],</div>
@@ -130,15 +130,15 @@ export default function ArchitecturePage() {
                   { name: 'AI Visibility', focus: 'Presence in AI search results' },
                   { name: 'Brand Sentiment', focus: 'AI model brand characterization' },
                 ].map((module, index) => (
-                  <div key={index} className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h4 className="font-semibold text-sm mb-1">{module.name}</h4>
-                    <p className="text-xs text-gray-600">{module.focus}</p>
+                  <div key={index} className="bg-green-50 dark:bg-green-950 p-4 rounded-lg border border-green-200 dark:border-green-800">
+                    <h4 className="font-semibold dark:text-white text-sm mb-1">{module.name}</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">{module.focus}</p>
                   </div>
                 ))}
               </div>
               <div className="mt-6">
-                <h4 className="font-semibold mb-2">Each Module Produces:</h4>
-                <div className="bg-gray-50 p-3 rounded border text-sm font-mono text-gray-700">
+                <h4 className="font-semibold dark:text-white mb-2">Each Module Produces:</h4>
+                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded border dark:border-gray-700 text-sm font-mono text-gray-700 dark:text-gray-300">
                   <div>{'{'}</div>
                   <div className="ml-4">score: &#123;&nbsp;value,&nbsp;maxValue,&nbsp;label&nbsp;&#125;</div>
                   <div className="ml-4">insights: [&nbsp;&#123;...&#125;&nbsp;],</div>
@@ -170,27 +170,27 @@ export default function ArchitecturePage() {
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                  <h4 className="font-semibold mb-2">Dashboard</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                <div className="bg-orange-50 dark:bg-orange-950 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                  <h4 className="font-semibold dark:text-white mb-2">Dashboard</h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                     <li>• AI Visibility Score</li>
                     <li>• Trust / E-E-A-T Score</li>
                     <li>• Keyword Coverage</li>
                     <li>• Audit timestamp</li>
                   </ul>
                 </div>
-                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                  <h4 className="font-semibold mb-2">Audit View</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                <div className="bg-orange-50 dark:bg-orange-950 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                  <h4 className="font-semibold dark:text-white mb-2">Audit View</h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                     <li>• Module-by-module analysis</li>
                     <li>• Detailed scores</li>
                     <li>• Issues & flags</li>
                     <li>• Prioritized recommendations</li>
                   </ul>
                 </div>
-                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                  <h4 className="font-semibold mb-2">Insights</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                <div className="bg-orange-50 dark:bg-orange-950 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                  <h4 className="font-semibold dark:text-white mb-2">Insights</h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                     <li>• Positive findings</li>
                     <li>• Areas of concern</li>
                     <li>• Competitive position</li>
@@ -203,11 +203,11 @@ export default function ArchitecturePage() {
         </div>
 
         {/* Technical Notes */}
-        <Card className="mt-8 bg-gray-50">
+        <Card className="mt-8 bg-gray-50 dark:bg-gray-900">
           <CardHeader>
             <CardTitle>Technical Implementation Notes</CardTitle>
           </CardHeader>
-          <CardContent className="text-sm text-gray-600">
+          <CardContent className="text-sm text-gray-600 dark:text-gray-300">
             <ul className="space-y-2">
               <li>
                 <strong>Data Flow:</strong> Unidirectional pipeline ensures clean separation of concerns 

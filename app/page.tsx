@@ -45,18 +45,18 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950">
       <Header />
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-gray-50 to-white py-20">
+        <section className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 Win the AI-First Search Era
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
                 Kasparro is an AI-native SEO & Brand Intelligence platform that helps you dominate 
                 AI-powered search engines like ChatGPT, Perplexity, and Gemini.
               </p>
@@ -80,7 +80,7 @@ export default function Home() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
                 Why AI-SEO is Different
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -88,7 +88,7 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle>Traditional SEO</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-gray-600">
+                  <CardContent className="text-gray-600 dark:text-gray-400">
                     <ul className="space-y-2">
                       <li>• Optimizes for Google&apos;s algorithm</li>
                       <li>• Focuses on keyword rankings</li>
@@ -102,7 +102,7 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle className="text-primary">AI-Native SEO</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-gray-600">
+                  <CardContent className="text-gray-600 dark:text-gray-400">
                     <ul className="space-y-2">
                       <li>• Optimizes for AI model comprehension</li>
                       <li>• Focuses on context and relevance</li>
@@ -117,13 +117,13 @@ export default function Home() {
         </section>
 
         {/* Core Modules Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
                 7 Core Audit Modules
               </h2>
-              <p className="text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+              <p className="text-gray-600 dark:text-gray-400 mb-12 text-center max-w-2xl mx-auto">
                 Comprehensive analysis across all dimensions of AI-first search performance
               </p>
               
@@ -148,18 +148,18 @@ export default function Home() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
                 How Kasparro Works
               </h2>
               
               <div className="space-y-8">
                 <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full flex items-center justify-center font-bold flex-shrink-0">
                     1
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Input Assembly</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Input Assembly</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
                       We crawl your website, analyze your content, and gather comprehensive data about 
                       your digital presence across all relevant channels.
                     </p>
@@ -167,12 +167,12 @@ export default function Home() {
                 </div>
                 
                 <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full flex items-center justify-center font-bold flex-shrink-0">
                     2
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Context Packing</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Context Packing</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
                       Our AI enriches your data with competitive intelligence, industry benchmarks, 
                       and AI model behavior patterns.
                     </p>
@@ -180,12 +180,12 @@ export default function Home() {
                 </div>
                 
                 <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full flex items-center justify-center font-bold flex-shrink-0">
                     3
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Multi-Module Analysis</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Multi-Module Analysis</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
                       7 specialized AI agents analyze different aspects of your AI-SEO performance, 
                       identifying strengths, weaknesses, and opportunities.
                     </p>
@@ -193,12 +193,12 @@ export default function Home() {
                 </div>
                 
                 <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full flex items-center justify-center font-bold flex-shrink-0">
                     4
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Actionable Insights</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Actionable Insights</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
                       Receive prioritized recommendations with expected impact, effort estimates, 
                       and implementation guidance.
                     </p>
@@ -210,7 +210,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-primary text-white">
+        <section className="py-20 bg-primary dark:bg-gray-800 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">
               Ready to Dominate AI-Powered Search?
@@ -220,7 +220,7 @@ export default function Home() {
               in ChatGPT, Perplexity, and Gemini.
             </p>
             <Link href="/app/dashboard">
-              <Button size="lg" variant="secondary" className="gap-2">
+              <Button size="lg" className="gap-2 border-2 border-white">
                 Start Your Free Audit <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>

@@ -16,6 +16,7 @@ npm run dev
 ## What's Here
 
 Built two main parts:
+
 1. **Marketing pages** - Home, Platform, About pages explaining what Kasparro does
 2. **Dashboard** - Brand selector, audit modules with scores/insights/issues, system architecture view
 
@@ -26,68 +27,180 @@ Used Next.js App Router, TypeScript for type safety, Tailwind for styling, and s
 ```
 kasparro-assignment/
 ├── app/
+│   ├── layout.tsx               # Root layout with ThemeProvider
+│   ├── globals.css              # Tailwind config + dark mode styles
 │   ├── page.tsx                 # Home page
 │   ├── platform/page.tsx        # Platform details
 │   ├── about/page.tsx           # About page
 │   └── app/                     # Dashboard (nested routes)
-│       ├── layout.tsx           # Sidebar layout
-│       ├── dashboard/page.tsx   # Brand metrics
-│       ├── audit/page.tsx       # Audit modules
+│       ├── layout.tsx           # Sidebar layout with theme toggle
+│       ├── dashboard/page.tsx   # Brand metrics with loading states
+│       ├── audit/page.tsx       # Audit modules with error handling
 │       └── architecture/page.tsx
 │
 ├── components/
-│   ├── ui/                      # shadcn components (Button, Card, Select, Badge)
-│   ├── layout/                  # Header, Footer
-│   └── features/                # (kept empty for now)
+│   ├── ui/                      # shadcn components (Button, Card, Select, Badge, Skeleton)
+│   ├── layout/                  # Header, Footer with theme toggle
+│   └── shared/                  # ThemeProvider, ThemeToggle
 │
-├── data/                         # JSON files with mock data
+├── data/                        # JSON files with mock data
 │   ├── brands.json              # 3 brands
-│   ├── dashboard-snapshots.json # High-level metrics
-│   └── audit-data.json          # Full audit for brand-1
+│   ├── dashboard-snapshots.json # High-level metrics for all brands
+│   └── audit-data.json          # Complete audit data for all 3 brands
 │
 ├── types/index.ts               # TypeScript interfaces
-└── lib/utils.ts                 # Helper functions
+└── lib/utils.ts                 # Helper functions (formatting, colors, validation)
 ```
 
-Split things into UI components, layouts, and data files. Pretty straightforward structure.
+Split things into UI components, layouts, and shared utilities. Pretty straightforward structure.
 
-## Key Decisions
+## Key Features Implemented
 
-### Components
-Separated into `ui/` (basic components from shadcn), `layout/` (Header/Footer), and `features/` (would put feature-specific stuff here). Used shadcn/ui because the components are customizable and already accessible.
+### Dark Mode
 
-### Data
-All data is in JSON files with TypeScript types in `types/index.ts`. Only `brand-1` has the complete audit data with all 7 modules - the other two brands just have dashboard snapshots. This kept the JSON files from getting too big.
+Added proper dark mode support using `next-themes`:
 
-### State
-Using `useState` for brand selection and module switching. Didn't need Zustand or Context since the state is only used within each page, not shared across the app.
+- Theme toggle button in header and dashboard
+- Respects system preferences by default
+- All pages and components work in both light and dark modes
+- Used CSS variables for theme colors where possible
+- Added custom `dark:` classes for specific elements
 
-### Routing
-Marketing pages (`/`, `/platform`, `/about`) are at root level. Dashboard is under `/app/*` with a shared sidebar layout for navigation.
+Learned a lot about the difference between using CSS variables (like `bg-primary`) vs manual dark mode styling (like `bg-gray-900 dark:bg-gray-800`). CSS variables are cleaner when you have a design system!
 
-## Bonus Features Considerations
+### Loading States
 
-- **Responsive design** - Works on mobile with responsive grids
-- **Hover effects** - Module switching has smooth transitions
-- **Dark mode ready** - Components have dark mode classes but no toggle
-- **No loading skeletons** - Everything is static data so no loading states
+Added Skeleton components for better UX:
 
+- Dashboard page shows skeleton cards while "loading" data
+- Audit page shows skeleton modules before content appears
+- Simulated 500ms delay to show the loading states
+- Used shadcn's Skeleton component for consistency
 
-## Tradeoffs
+### Error Handling
 
-**What worked:**
-- TypeScript caught mistakes early
-- shadcn/ui saved time 
-- Tailwind made responsive stuff easy
+Implemented error states for both dashboard pages:
 
-**What I'd improve:**
-- Could extract more reusable components from pages
-- Only one brand has full data (would add more in production)
-- No error handling or empty states
+- Shows error cards when data fails to load
+- Retry buttons to refresh the page
+- Proper error messages with visual feedback
 
-**What I skipped:**
-- Animations beyond CSS transitions
-- Global state (didn't need it)
-- Loading skeletons (no async data)
+### Brand Switching
+
+Made the dashboard dynamic:
+
+- Brand selector dropdown in Dashboard and Audit pages
+- All 3 brands now have complete audit data (not just brand-1 anymore)
+- Switching brands updates all scores and insights
+- Used React state to manage selected brand
+
+### Better Utilities
+
+Improved `lib/utils.ts` with helper functions:
+
+- `formatPercentage()`, `formatNumber()` for displaying metrics
+- `formatDate()`, `formatRelativeTime()` for timestamps
+- `getScoreColor()`, `getSeverityVariant()` for consistent styling
+- Input validation and text manipulation helpers
+
+These made the code cleaner and easier to maintain.
+
+## What I Learned
+
+**Dark Mode is tricky:**
+
+- Had to make sure every text color, background, and border had proper contrast in both modes
+- Selection highlighting needed custom CSS to work properly
+- Learning when to use CSS variables vs `dark:` classes was important
+
+**TypeScript helps a lot:**
+
+- Caught mistakes when passing wrong data types
+- Made refactoring safer (like when I updated the audit data structure)
+- IDE autocomplete made development faster
+
+**Component organization:**
+
+- Started with everything inline, then extracted reusable pieces
+- Learned to balance between too many small components vs components that are too big
+- Still learning where to draw the line!
+
+**State management:**
+
+- Used simple `useState` for brand selection and module switching
+- Thought about using Context or Zustand but decided against over-engineering
+- Sometimes simple is better
+
+## Tradeoffs & Decisions
+
+**What worked well:**
+
+- TypeScript caught errors early
+- shadcn/ui components saved tons of time
+- Tailwind made responsive design straightforward
+- Dark mode using next-themes was easier than expected
+
+**What I'd improve with more time:**
+
+- Could add animations for page transitions
+- Better mobile navigation (hamburger menu for small screens)
+- More comprehensive error messages
+- Add tests (never got to that part)
+
+**What I struggled with:**
+
+- Getting dark mode consistent everywhere took longer than expected
+- Had some issues with JSX syntax when showing code examples in the architecture page
+- Figuring out the right component structure took a few iterations
+
+**Intentional choices:**
+
+- Kept all data in JSON files instead of setting up a backend
+- Used simple state management instead of complex solutions
+- Focused on functionality over fancy animations
+- Made sure it works on mobile even if not perfect
+
+## Data Structure
+
+All 3 brands now have:
+
+- Dashboard snapshot with AI Visibility Score, Trust Score, Keyword Coverage
+- Complete audit data with 7 modules each
+- Different scores and insights to show variety
+
+The audit modules are:
+
+1. Content Analysis
+2. E-E-A-T Assessment
+3. Keyword Optimization
+4. Technical SEO
+5. Competitor Analysis
+6. AI Visibility
+7. Brand Sentiment
+
+## Running the Project
+
+```bash
+# Install dependencies
+npm install
+
+# Development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## Technologies Used
+
+- **Next.js 16.1.1** - React framework with App Router
+- **TypeScript** - Type safety
+- **Tailwind CSS v4** - Styling with OKLCH colors
+- **shadcn/ui** - Component library
+- **next-themes** - Dark mode support
+- **Lucide React** - Icons
 
 **Deployed at**: https://frontend-assignment-nine-vert.vercel.app/

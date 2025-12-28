@@ -10,13 +10,13 @@ export default function PlatformPage() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-gray-50 to-white py-16">
+        <section className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 The Kasparro Platform
               </h1>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600 dark:text-gray-300">
                 A comprehensive AI-native SEO intelligence system designed for the 
                 future of search: ChatGPT, Perplexity, Gemini, and beyond.
               </p>
@@ -25,10 +25,10 @@ export default function PlatformPage() {
         </section>
 
         {/* Audit Pipeline Flow */}
-        <section className="py-16">
+        <section className="py-16 bg-white dark:bg-gray-950">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
                 The Audit Pipeline
               </h2>
               
@@ -95,10 +95,10 @@ export default function PlatformPage() {
         </section>
 
         {/* Data Consumption */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50 dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
                 What Data Kasparro Consumes
               </h2>
               
@@ -107,7 +107,7 @@ export default function PlatformPage() {
                   <CardHeader>
                     <CardTitle>Your Website</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-gray-600">
+                  <CardContent className="text-gray-600 dark:text-gray-300">
                     <ul className="space-y-2">
                       <li>• Page content and structure</li>
                       <li>• Meta data and schema markup</li>
@@ -122,7 +122,7 @@ export default function PlatformPage() {
                   <CardHeader>
                     <CardTitle>External Signals</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-gray-600">
+                  <CardContent className="text-gray-600 dark:text-gray-300">
                     <ul className="space-y-2">
                       <li>• AI search engine responses</li>
                       <li>• Competitor content analysis</li>
@@ -141,7 +141,7 @@ export default function PlatformPage() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
                 What Brands Receive
               </h2>
               
@@ -191,45 +191,53 @@ export default function PlatformPage() {
         </section>
 
         {/* Differentiation */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50 dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
                 How Kasparro Differs from Traditional SEO Tools
               </h2>
               
               <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="text-xl font-semibold mb-3">AI-First, Not Google-First</h3>
-                  <p className="text-gray-600">
-                    While traditional tools optimize for Google&apos;s algorithm, Kasparro optimizes 
-                    for how AI models understand, process, and cite your content.
-                  </p>
-                </div>
+                <Card className="border-l-4 border-primary">
+                  <CardHeader>
+                    <CardTitle>AI-First, Not Google-First</CardTitle>
+                    <CardDescription>
+                      While traditional tools optimize for Google&apos;s algorithm, Kasparro optimizes 
+                      for how AI models understand, process, and cite your content.
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
 
-                <div className="bg-white p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="text-xl font-semibold mb-3">Brand-Centric Intelligence</h3>
-                  <p className="text-gray-600">
-                    We don&apos;t just track keyword rankings. We measure how AI models characterize 
-                    your brand, understand your expertise, and position you against competitors.
-                  </p>
-                </div>
+                <Card className="border-l-4 border-primary">
+                  <CardHeader>
+                    <CardTitle>Brand-Centric Intelligence</CardTitle>
+                    <CardDescription>
+                      We don&apos;t just track keyword rankings. We measure how AI models characterize 
+                      your brand, understand your expertise, and position you against competitors.
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
 
-                <div className="bg-white p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="text-xl font-semibold mb-3">Real AI Search Data</h3>
-                  <p className="text-gray-600">
-                    Direct measurement of your presence in ChatGPT, Perplexity, Gemini, and other 
-                    AI search engines - not proxies or estimates.
-                  </p>
-                </div>
+                <Card className="border-l-4 border-primary">
+                  <CardHeader>
+                    <CardTitle>Real AI Search Data</CardTitle>
+                    <CardDescription>
+                      Direct measurement of your presence in ChatGPT, Perplexity, Gemini, and other 
+                      AI search engines - not proxies or estimates.
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
 
-                <div className="bg-white p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="text-xl font-semibold mb-3">Context Over Keywords</h3>
-                  <p className="text-gray-600">
-                    AI models care about semantic meaning and topical authority, not exact-match 
-                    keywords. Our analysis reflects that reality.
-                  </p>
-                </div>
+                <Card className="border-l-4 border-primary">
+                  <CardHeader>
+                    <CardTitle>Context Over Keywords</CardTitle>
+                    <CardDescription>
+                      AI models care about semantic meaning and topical authority, not exact-match 
+                      keywords. Our analysis reflects that reality.
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
               </div>
             </div>
           </div>
