@@ -66,8 +66,6 @@ Added proper dark mode support using `next-themes`:
 - Used CSS variables for theme colors where possible
 - Added custom `dark:` classes for specific elements
 
-Learned a lot about the difference between using CSS variables (like `bg-primary`) vs manual dark mode styling (like `bg-gray-900 dark:bg-gray-800`). CSS variables are cleaner when you have a design system!
-
 ### Loading States
 
 Added Skeleton components for better UX:
@@ -82,7 +80,6 @@ Added Skeleton components for better UX:
 Implemented error states for both dashboard pages:
 
 - Shows error cards when data fails to load
-- Retry buttons to refresh the page
 - Proper error messages with visual feedback
 
 ### Brand Switching
@@ -165,7 +162,6 @@ Full mobile responsiveness across all pages:
 - ~~Could add animations for page transitions~~ ✅ **DONE** - Added scroll-triggered animations
 - ~~Better mobile navigation (hamburger menu for small screens)~~ ✅ **DONE** - Full mobile responsiveness with collapsible sidebar
 - More comprehensive error messages
-- Add tests (never got to that part)
 
 **What I struggled with:**
 
